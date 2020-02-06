@@ -16,7 +16,7 @@ even more text
 print("Python code")
 ```
 
-epic image (not found)
+epic image (image not found)
 <img src="/images/dawfrgs"/>
 
 This is a link
