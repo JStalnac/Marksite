@@ -1,5 +1,5 @@
 import mistletoe
-from flask import Flask, send_file
+from flask import Flask, send_file, render_template
 
 app = Flask(__name__)
 
@@ -35,6 +35,10 @@ def root():
 @app.route("/images/<image>")
 def get_image(image):
     return send_file(image, mimetype="image/png")
+
+@app.route("/article/<name>/")
+def article(name):
+    return render_template("article.html", content=html)
 
 if __name__ == "__main__":
     app.run(debug=True)
