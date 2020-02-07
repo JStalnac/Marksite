@@ -16,17 +16,16 @@ even more text
 print("Python code")
 ```
 
-epic image (image not found)
-<img src="/images/dawfrgs"/>
-
 This is a link
 <https://github.com/JStalnac/Marksite>
+This is a hyperlink
+[Google](https://google.co.uk/)
 
 """
 
 html = mistletoe.markdown(md)
 
-print(html + "\n\n\n")
+# print(html + "\n\n\n")
 
 @app.route("/")
 def root():
@@ -38,7 +37,7 @@ def get_image(image):
 
 @app.route("/article/<name>/")
 def article(name):
-    return render_template("article.html", content=html)
+    return render_template("article.html", content=name)
 
 if __name__ == "__main__":
     app.run(debug=True)
