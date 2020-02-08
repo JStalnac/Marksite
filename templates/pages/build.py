@@ -9,7 +9,6 @@ def build_page(name):
     else:
         os.chdir(name)
         page_data = toml.load("page.cfg")
-        print(page_data)
 
         if not os.path.isfile("page.md"):
             raise FileNotFoundError("No page markdown file found!")
