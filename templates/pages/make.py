@@ -13,7 +13,7 @@ def make_page(name):
             f.close()
 
         with open("page.md", "w+") as f:
-           f.write("""# New Article\nThis article is empty""") 
+           f.write("""# New Article\nFor help with markdown read the [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)""")
 
     else:
         raise Exception(f"Page by the name '{name}' already exists!")
